@@ -13,3 +13,5 @@ What you can do
 - Delete an entry (I am lazy, don't edit it just recreate...)
 - Double tap to delete
 - If you tapped ONLY once and no longer want to delete, long press to undo
+
+The app icon is a picture of my cat, Zelda. (She's a princess)
