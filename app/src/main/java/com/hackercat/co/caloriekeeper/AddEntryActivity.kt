@@ -3,6 +3,7 @@ package com.hackercat.co.caloriekeeper
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.add_entry_activity.*
 import kotlinx.android.synthetic.main.content_add.*
 import java.text.SimpleDateFormat
@@ -17,11 +18,11 @@ class AddEntryActivity() : AppCompatActivity() {
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         val currentDate = sdf.format(Date())
         dateedittext.setText(currentDate.toString())
-        fab2.setOnClickListener { view ->
+        fab2.setOnClickListener { _ ->
             if(wrongDate()) {
                 finish()
             } else {
-                dateedittext.setBackgroundColor(resources.getColor(R.color.error))
+                dateedittext.setBackgroundColor(ContextCompat.getColor(this, R.color.error))
             }
         }
     }
@@ -45,22 +46,18 @@ class AddEntryActivity() : AppCompatActivity() {
     }
 
     fun wrongDate(): Boolean{
-        var notWrong = true
         val tmp = dateedittext.text.toString()
         if(tmp.length == 10) {
-            notWrong = between0and9(tmp[0]) && between0and9(tmp[1])
+            return between0and9(tmp[0]) && between0and9(tmp[1])
                     && between0and9(tmp[3]) && between0and9(tmp[4])
                     && between0and9(tmp[6]) && between0and9(tmp[7])
                     && between0and9(tmp[8]) && between0and9(tmp[9])
         } else {
             return false
         }
-
-        return notWrong
     }
 
     fun between0and9(c: Char): Boolean{
-        var between = true
         return c.toInt() > 47 && c.toInt() < 58
     }
 }
