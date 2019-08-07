@@ -15,3 +15,8 @@ What you can do
 - If you tapped ONLY once and no longer want to delete, long press to undo
 
 The app icon is a picture of my cat, Zelda. (She's a princess)
+
+## Recent Updates
+
+- Added an editable date so you can post to the past/future (if ya want)
+- Removed 20 warnings 
