@@ -2,7 +2,6 @@
 
 ## Keep track of calories
 
-![App Icon](/app/src/main/ic_launcher-web.png=100x100)
 ![App Preview](/frontplb.png)
 
 This app is SUPER simple because I got tired of ads and payments and all that jazz. I just wanted to type my food and the calories and that is it.
