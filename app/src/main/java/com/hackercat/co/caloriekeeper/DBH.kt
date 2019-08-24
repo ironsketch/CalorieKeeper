@@ -83,7 +83,7 @@ class DBH(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null, DATABA
         synchronized(Lock) {
             val entries: ArrayList< ArrayList<String>> = ArrayList< ArrayList<String>>()
 
-            val selectQuery = "SELECT uid, date, name, calories FROM $TABLE_Entries"
+            val selectQuery = "SELECT uid, date, name, calories FROM $TABLE_Entries ORDER BY date ASC"
             val db = this.readableDatabase
             var cursor: Cursor?
 
